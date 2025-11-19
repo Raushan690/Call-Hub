@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omegle Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1 class="title">Call Hub</h1>
+
+  <!-- STATUS -->
+  <div id="status" class="status">Click “Start” to begin</div>
+
+  <!-- VIDEO AREA -->
+  <div class="video-area">
+    <video id="localVideo" autoplay playsinline muted></video>
+    <video id="remoteVideo" autoplay playsinline></video>
+  </div>
+
+  <!-- CHAT AREA -->
+  <div class="chat-box">
+    <div id="messages" class="messages"></div>
+
+    <div class="input-row">
+      <input id="msgInput" type="text" placeholder="Type a message..." />
+      <button id="sendBtn" disabled>Send</button>
+    </div>
+  </div>
+
+  <!-- CONTROL BUTTONS -->
+  <div class="controls">
+    <button id="startBtn">Start</button>
+    <button id="nextBtn" disabled>Next</button>
+    <button id="stopBtn" disabled>Stop</button>
+  </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
